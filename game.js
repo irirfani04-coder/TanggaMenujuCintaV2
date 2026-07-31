@@ -26,7 +26,7 @@ for(let i=100;i>=1;i--){
     board.appendChild(box);
 
 }
-document.querySelectorAll(".box")[0].appendChild(player);
+document.querySelectorAll(".box")[99].appendChild(player);
 // Tombol Dadu
 
 roll.onclick=function(){
