@@ -42,7 +42,7 @@ document.querySelectorAll(".box").forEach(box=>{
     }
 });
 
-document.querySelectorAll(".box")[posisi-1].appendChild(player);
+document.querySelectorAll(".box")[100-posisi].appendChild(player);
     dice.innerHTML=angka;
 
     status.innerHTML="💖 Kamu mendapatkan angka "+angka;
