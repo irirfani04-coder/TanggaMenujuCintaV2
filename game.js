@@ -47,4 +47,4 @@ document.querySelectorAll(".box")[posisi-1].appendChild(player);
 
     status.innerHTML="💖 Kamu mendapatkan angka "+angka;
 
-};
+}; 
