@@ -7,6 +7,9 @@ const board = document.getElementById("board");
 const dice = document.getElementById("dice");
 const roll = document.getElementById("roll");
 const status = document.getElementById("status");
+const popup = document.getElementById("popup");
+const popupText = document.getElementById("popupText");
+const tutupPopup = document.getElementById("tutupPopup");
 let posisi = 1;
 
 const player = document.createElement("div");
@@ -163,7 +166,18 @@ const pertanyaan = {
 
 };
 function cekPertanyaan(){
+
     if(pertanyaan[posisi]){
-        alert(pertanyaan[posisi]);
+
+        popup.style.display = "flex";
+        popupText.innerHTML = pertanyaan[posisi];
+
     }
+
+}
+
+tutupPopup.onclick = function(){
+
+    popup.style.display = "none";
+
 }
