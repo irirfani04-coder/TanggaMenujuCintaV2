@@ -10,6 +10,8 @@ const status = document.getElementById("status");
 const popup = document.getElementById("popup");
 const popupText = document.getElementById("popupText");
 const tutupPopup = document.getElementById("tutupPopup");
+const jawabanPopup = document.getElementById("jawabanPopup");
+const kirimJawabanPopup = document.getElementById("kirimJawabanPopup");
 let posisi = 1;
 
 const player = document.createElement("div");
@@ -181,3 +183,19 @@ tutupPopup.onclick = function(){
     popup.style.display = "none";
 
 }
+kirimJawabanPopup.onclick = function(){
+
+    const jawaban = jawabanPopup.value;
+
+    if(jawaban == ""){
+        alert("Jawab dulu ya ❤️");
+        return;
+    }
+
+    alert("Jawaban berhasil dikirim 💖");
+
+    popup.style.display = "none";
+
+    jawabanPopup.value = "";
+
+};
