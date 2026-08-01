@@ -45,7 +45,7 @@ roll.onclick=function(){
     const angka=Math.floor(Math.random()*6)+1;
 posisi += angka;
 if (tangga[posisi]) {
-    alert("🪜 Yeay! Kamu naik tangga!");
+
     posisi = tangga[posisi];
 }
     
