@@ -13,7 +13,13 @@ const tutupPopup = document.getElementById("tutupPopup");
 const jawabanPopup = document.getElementById("jawabanPopup");
 const kirimJawabanPopup = document.getElementById("kirimJawabanPopup");
 let posisi = 1;
-
+const tangga = {
+    3: 22,
+    8: 30,
+    28: 55,
+    58: 77,
+    75: 96
+};
 const player = document.createElement("div");
 player.id = "player";
 player.innerHTML = "❤️";
@@ -38,6 +44,11 @@ roll.onclick=function(){
 
     const angka=Math.floor(Math.random()*6)+1;
 posisi += angka;
+if (tangga[posisi]) {
+    alert("🪜 Yeay! Kamu naik tangga!");
+    posisi = tangga[posisi];
+}
+    
 
 if (posisi > 100) posisi = 100;
 
