@@ -195,3 +195,9 @@ button:hover{
     line-height: 1.2;
     font-size: 16px;
 }
+.pion{
+    width:28px;
+    height:28px;
+    object-fit:contain;
+    pointer-events:none;
+}
