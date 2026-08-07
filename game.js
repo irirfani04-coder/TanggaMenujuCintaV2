@@ -78,10 +78,16 @@ let tujuan = posisi + angka;
 setTimeout(() => {
 
     posisi = tujuanTangga;
+
+    if (giliran === 1) {
+        posisi1 = posisi;
+    } else {
+        posisi2 = posisi;
+    }
+
     pindahPion();
 
 }, 500);
-
 }
 
     
@@ -93,10 +99,17 @@ setTimeout(() => {
 
     setTimeout(() => {
 
-        posisi = tujuanUlar;
-        pindahPion();
+    posisi = tujuanUlar;
 
-    }, 500);
+    if (giliran === 1) {
+        posisi1 = posisi;
+    } else {
+        posisi2 = posisi;
+    }
+
+    pindahPion();
+
+}, 500);
 
 }
 if (giliran === 1) {
