@@ -53,7 +53,18 @@ document.querySelectorAll(".box")[99].appendChild(player);
 roll.onclick=function(){
 
     const angka=Math.floor(Math.random()*6)+1;
-posisi += angka;
+let tujuan = posisi + angka;
+    let animasi = setInterval(() => {
+
+    if (posisi >= tujuan) {
+        clearInterval(animasi);
+        return;
+    }
+
+    posisi++;
+    pindahPion();
+
+}, 300);
 if (tangga[posisi]) {
 
     posisi = tangga[posisi];
@@ -67,16 +78,9 @@ if (ular[posisi]) {
 }
     
 
-if (posisi > 100) posisi = 100;
+if (tujuan > 100) tujuan = 100;
 
-document.querySelectorAll(".box").forEach(box=>{
-    if(box.contains(player)){
-        box.removeChild(player);
-    }
-});
-
-document.querySelectorAll(".box")[100-posisi].appendChild(player);
-    dice.innerHTML=angka;
+pindahPion();
 
     status.innerHTML="💖 Kamu mendapatkan angka "+angka;
 cekPertanyaan();
@@ -227,3 +231,14 @@ kirimJawabanPopup.onclick = function(){
     jawabanPopup.value = "";
 
 };
+function pindahPion() {
+
+    document.querySelectorAll(".box").forEach(box => {
+        if (box.contains(player)) {
+            box.removeChild(player);
+        }
+    });
+
+    document.querySelectorAll(".box")[100 - posisi].appendChild(player);
+
+}
