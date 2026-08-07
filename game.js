@@ -75,11 +75,21 @@ setTimeout(() => {
 
 }
 
-    if (ular[posisi]) {
-        posisi = ular[posisi];
+    
+        if (ular[posisi]) {
+
+    status.innerHTML = "🐍 Digigit Ular...";
+
+    const tujuanUlar = ular[posisi];
+
+    setTimeout(() => {
+
+        posisi = tujuanUlar;
         pindahPion();
-        status.innerHTML = "🐍 Digigit Ular!";
-    }
+
+    }, 500);
+
+}
 
     return;
 }
