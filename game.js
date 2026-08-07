@@ -6,6 +6,7 @@
 const board = document.getElementById("board");
 const dice = document.getElementById("dice");
 const roll = document.getElementById("roll");
+const restart = document.getElementById("restart");
 const status = document.getElementById("status");
 const popup = document.getElementById("popup");
 const popupText = document.getElementById("popupText");
@@ -87,7 +88,7 @@ if (posisi >= 100) {
     );
 
     roll.disabled = true;
-
+restart.style.display = "inline-block";
     return;
 }
     if (tangga[posisi]) {
@@ -328,3 +329,17 @@ if (box.contains(player2)) {
 document.querySelectorAll(".box")[100 - posisi2].appendChild(player2);
 
 }
+restart.onclick = function () {
+
+    posisi1 = 1;
+    posisi2 = 1;
+    giliran = 1;
+
+    roll.disabled = false;
+    restart.style.display = "none";
+
+    status.innerHTML = "🎲 Giliran Mas Ir 🐵";
+
+    pindahPion();
+
+};
