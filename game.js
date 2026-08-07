@@ -63,12 +63,14 @@ let tujuan = posisi + angka;
 
     status.innerHTML = "🪜 Naik Tangga...";
 
-    setTimeout(() => {
+    const tujuanTangga = tangga[posisi];
 
-        posisi = tangga[posisi];
-        pindahPion();
+setTimeout(() => {
 
-    }, 500);
+    posisi = tujuanTangga;
+    pindahPion();
+
+}, 500);
 
 }
 
