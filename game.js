@@ -12,7 +12,8 @@ const popupText = document.getElementById("popupText");
 const tutupPopup = document.getElementById("tutupPopup");
 const jawabanPopup = document.getElementById("jawabanPopup");
 const kirimJawabanPopup = document.getElementById("kirimJawabanPopup");
-let posisi = 1;
+let posisi1 = 1;
+let posisi2 = 1;
 const tangga = {
     3: 22,
     8: 30,
@@ -30,9 +31,12 @@ const ular = {
     87: 24,
     99: 78
 };
-const player = document.createElement("div");
-player.id = "player";
-player.innerHTML = "❤️";
+const player1 = document.createElement("div");
+const player2 = document.createElement("div");
+player1.id = "player1";
+player2.id = "player2";
+player1.innerHTML = "🐵";
+player2.innerHTML = "🐳";
 
 
 // Membuat 100 kotak
@@ -47,7 +51,8 @@ for(let i=100;i>=1;i--){
     board.appendChild(box);
 
 }
-document.querySelectorAll(".box")[99].appendChild(player);
+document.querySelectorAll(".box")[99].appendChild(player1);
+document.querySelectorAll(".box")[99].appendChild(player2);
 // Tombol Dadu
 
 roll.onclick=function(){
