@@ -57,30 +57,33 @@ let tujuan = posisi + angka;
     let animasi = setInterval(() => {
 
     if (posisi >= tujuan) {
-        clearInterval(animasi);
-        return;
+    clearInterval(animasi);
+
+    if (tangga[posisi]) {
+        posisi = tangga[posisi];
+        pindahPion();
+        status.innerHTML = "🪜 Naik Tangga!";
     }
+
+    if (ular[posisi]) {
+        posisi = ular[posisi];
+        pindahPion();
+        status.innerHTML = "🐍 Digigit Ular!";
+    }
+
+    return;
+}
 
     posisi++;
     pindahPion();
 
 }, 300);
-if (tangga[posisi]) {
 
-    posisi = tangga[posisi];
-    status.innerHTML = "🪜 Naik Tangga!";
-}
-
-if (ular[posisi]) {
-
-    posisi = ular[posisi];
-    status.innerHTML = "🐍 Digigit Ular!";
-}
     
 
 if (tujuan > 100) tujuan = 100;
 
-pindahPion();
+
 
     status.innerHTML="💖 Kamu mendapatkan angka "+angka;
 cekPertanyaan();
