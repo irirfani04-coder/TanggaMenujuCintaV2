@@ -339,7 +339,8 @@ restart.onclick = function () {
     restart.style.display = "none";
 
     status.innerHTML = "🎲 Giliran Mas Ir 🐵";
-
+popup.style.display = "none";
+jawabanPopup.value = "";
     pindahPion();
 
 };
