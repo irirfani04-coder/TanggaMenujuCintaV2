@@ -37,7 +37,8 @@ player1.id = "player1";
 player2.id = "player2";
 player1.innerHTML = "🐵";
 player2.innerHTML = "🐳";
-
+player1.className = "player";
+player2.className = "player";
 
 // Membuat 100 kotak
 for(let i=100;i>=1;i--){
