@@ -53,6 +53,7 @@ document.querySelectorAll(".box")[99].appendChild(player);
 roll.onclick=function(){
 
     const angka=Math.floor(Math.random()*6)+1;
+    dice.innerHTML = angka;
 let tujuan = posisi + angka;
     let animasi = setInterval(() => {
 
