@@ -251,7 +251,7 @@ function cekPertanyaan(){
 if (pertanyaan[posisi]) {
 
     popup.style.display = "flex";
-    popupText.innerHTML = pertanyaan[posisi];
+    popupText.innerHTML = pertanyaan[posisiSekarang];
 
 }
 
