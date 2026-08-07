@@ -20,6 +20,16 @@ const tangga = {
     58: 77,
     75: 96
 };
+const ular = {
+    17: 4,
+    26: 10,
+    39: 18,
+    54: 34,
+    62: 19,
+    64: 60,
+    87: 24,
+    99: 78
+};
 const player = document.createElement("div");
 player.id = "player";
 player.innerHTML = "❤️";
@@ -47,6 +57,13 @@ posisi += angka;
 if (tangga[posisi]) {
 
     posisi = tangga[posisi];
+    status.innerHTML = "🪜 Naik Tangga!";
+}
+
+if (ular[posisi]) {
+
+    posisi = ular[posisi];
+    status.innerHTML = "🐍 Digigit Ular!";
 }
     
 
