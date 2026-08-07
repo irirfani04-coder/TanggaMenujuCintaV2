@@ -60,10 +60,17 @@ let tujuan = posisi + angka;
     clearInterval(animasi);
 
     if (tangga[posisi]) {
+
+    status.innerHTML = "🪜 Naik Tangga...";
+
+    setTimeout(() => {
+
         posisi = tangga[posisi];
         pindahPion();
-        status.innerHTML = "🪜 Naik Tangga!";
-    }
+
+    }, 500);
+
+}
 
     if (ular[posisi]) {
         posisi = ular[posisi];
