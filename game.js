@@ -50,7 +50,13 @@ for(let i=100;i>=1;i--){
     box.className="box";
 
     box.innerHTML=i;
+if (tangga[i]) {
+    box.innerHTML += "<br>🪜";
+}
 
+if (ular[i]) {
+    box.innerHTML += "<br>🐍";
+}
     board.appendChild(box);
 
 }
