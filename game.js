@@ -68,7 +68,28 @@ let tujuan = posisi + angka;
 
     if (posisi >= tujuan) {
     clearInterval(animasi);
+if (posisi >= 100) {
 
+    posisi = 100;
+
+    if (giliran === 1) {
+        posisi1 = 100;
+    } else {
+        posisi2 = 100;
+    }
+
+    pindahPion();
+
+    alert(
+        giliran === 1
+        ? "🎉 Selamat! 🐵 Mas Ir memenangkan hati Wulan Cantik ❤️"
+        : "🎉 Selamat! 🐳 Wulan memenangkan hati Mas Ir Ganteng ❤️"
+    );
+
+    roll.disabled = true;
+
+    return;
+}
     if (tangga[posisi]) {
 
     status.innerHTML = "🪜 Naik Tangga...";
