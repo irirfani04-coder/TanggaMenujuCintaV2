@@ -246,12 +246,14 @@ const pertanyaan = {
 };
 function cekPertanyaan(){
 
-    if(pertanyaan[posisi]){
+    let posisi = (giliran === 1) ? posisi1 : posisi2;
 
-        popup.style.display = "flex";
-        popupText.innerHTML = pertanyaan[posisi];
+if (pertanyaan[posisi]) {
 
-    }
+    popup.style.display = "flex";
+    popupText.innerHTML = pertanyaan[posisi];
+
+}
 
 }
 
