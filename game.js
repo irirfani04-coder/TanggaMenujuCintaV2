@@ -37,8 +37,8 @@ const player1 = document.createElement("div");
 const player2 = document.createElement("div");
 player1.id = "player1";
 player2.id = "player2";
-player1.innerHTML = "🐵";
-player2.innerHTML = "🐳";
+player1.innerHTML = '<img src="monyet.png" class="pion">';
+player2.innerHTML = '<img src="lumba.png" class="pion">';
 player1.className = "player";
 player2.className = "player";
 
