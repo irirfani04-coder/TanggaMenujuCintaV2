@@ -14,6 +14,7 @@ const jawabanPopup = document.getElementById("jawabanPopup");
 const kirimJawabanPopup = document.getElementById("kirimJawabanPopup");
 let posisi1 = 1;
 let posisi2 = 1;
+let giliran = 1;
 const tangga = {
     3: 22,
     8: 30,
@@ -60,6 +61,8 @@ roll.onclick=function(){
 
     const angka=Math.floor(Math.random()*6)+1;
     dice.innerHTML = angka;
+let posisi = (giliran === 1) ? posisi1 : posisi2;
+
 let tujuan = posisi + angka;
     let animasi = setInterval(() => {
 
@@ -96,12 +99,25 @@ setTimeout(() => {
     }, 500);
 
 }
-
+if (giliran === 1) {
+    giliran = 2;
+    status.innerHTML = "🎲 Giliran Wulan 🐳";
+} else {
+    giliran = 1;
+    status.innerHTML = "🎲 Giliran Mas Ir 🐵";
+}
     return;
 }
 
     posisi++;
-    pindahPion();
+
+if (giliran === 1) {
+    posisi1 = posisi;
+} else {
+    posisi2 = posisi;
+}
+
+pindahPion();
 
 }, 300);
 
@@ -263,11 +279,16 @@ kirimJawabanPopup.onclick = function(){
 function pindahPion() {
 
     document.querySelectorAll(".box").forEach(box => {
-        if (box.contains(player)) {
-            box.removeChild(player);
-        }
+        if (box.contains(player1)) {
+    box.removeChild(player1);
+}
+
+if (box.contains(player2)) {
+    box.removeChild(player2);
+}
     });
 
-    document.querySelectorAll(".box")[100 - posisi].appendChild(player);
+    document.querySelectorAll(".box")[100 - posisi1].appendChild(player1);
+document.querySelectorAll(".box")[100 - posisi2].appendChild(player2);
 
 }
